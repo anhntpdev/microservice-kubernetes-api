@@ -15,7 +15,7 @@ COPY model_data /app/model_data
 RUN pip install --no-cache-dir -r requirements.txt
 
 ## Step 4:
-EXPOSE 81
+EXPOSE 5001
 ## Step 5:
 # Run app.py at container launch
 CMD [ "python", "app.py" ]
