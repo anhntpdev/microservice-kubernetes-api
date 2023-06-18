@@ -10,4 +10,4 @@ docker build -t anhntpdev/project-ml-microservice-api .
 docker images
 # Step 3: 
 # Run flask app
-docker run --name microservices-api-new -d -p 8001:8080 anhntpdev/project-ml-microservice-api
+docker run --name microservices-api -d -p 8001:8080 anhntpdev/project-ml-microservice-api
