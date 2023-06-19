@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath=anhntp/project-ml-microservice-api
+dockerpath=anhntp/microservice-api
 
 # Step 2:  
 # Authenticate & tag
