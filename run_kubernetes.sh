@@ -4,7 +4,7 @@
 
 # Step 1:
 # This is your Docker ID/path
-dockerpath=anhntp/microservice-api
+dockerpath=anhntp/project-ml-microservice-api
 
 # Step 2
 # Run the Docker Hub container with kubernetes
