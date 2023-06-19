@@ -9,7 +9,7 @@ dockerpath=anhntpdev/project-ml-microservice-api
 
 # Step 2:  
 # Authenticate & tag
-docker login --username anhntp -p $1
+docker login -u "anhntp" -p "t64NeyTa#" docker.io
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
