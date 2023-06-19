@@ -2,31 +2,21 @@ Sending build context to Docker daemon  270.4MB
 Step 1/8 : FROM python:3.7.11-stretch
  ---> 09ae15ffaa31
 Step 2/8 : WORKDIR /app
- ---> Running in abf9fe470c93
-Removing intermediate container abf9fe470c93
- ---> 5b6697cc232c
+ ---> Running in 3d3232ada65a
+Removing intermediate container 3d3232ada65a
+ ---> cc63f2491d15
 Step 3/8 : COPY app.py .
- ---> ca7a8e84c1cb
+ ---> 02c78f063441
 Step 4/8 : COPY requirements.txt .
- ---> 0fd6e8288d69
+ ---> 8d6a5ff0cafa
 Step 5/8 : COPY model_data /app/model_data
- ---> cf2da1e6c1e2
-Step 6/8 : RUN pip install --no-cache-dir -r requirements.txt
- ---> dce8f9c4673f
-Step 7/8 : EXPOSE 80
- ---> Running in 41ff1d767834
-Removing intermediate container 41ff1d767834
- ---> 7674534a40fa
-Step 8/8 : CMD [ "python", "app.py" ]
- ---> Running in d4c0e4c29288
-Removing intermediate container d4c0e4c29288
- ---> a06dd2ad3497
-Successfully built a06dd2ad3497
-Successfully tagged anhntpdev/project-ml-microservice-api:latest
-REPOSITORY                              TAG              IMAGE ID       CREATED         SIZE
-anhntpdev/project-ml-microservice-api   latest           a06dd2ad3497   1 second ago    1.16GB
-python                                  3.7.11-stretch   09ae15ffaa31   22 months ago   904MB
-d60a943906eb92f6e97f3ab81d8b279a43356558325776c6a03a4a68a6080950
+ ---> 9b2801a098af
+Successfully built 9b2801a098af
+Successfully tagged anhntp/project-ml-microservice-api:latest
+REPOSITORY                           TAG              IMAGE ID       CREATED                  SIZE
+anhntp/project-ml-microservice-api   latest           9b2801a098af   Less than a second ago   1.16GB
+python                               3.7.11-stretch   09ae15ffaa31   22 months ago            904MB
+42b53cc7d2acec76c87c141c41c485755039f3d26c2ce787ff8f426607dd58a3
 
 # prediction
 
@@ -39,7 +29,7 @@ Port: 8080
 
 #prediction logging
 
- * Serving Flask app "app" (lazy loading)
+* Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
    Use a production WSGI server instead.
@@ -47,15 +37,15 @@ Port: 8080
  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 265-245-947
-[2023-06-19 03:50:40,109] INFO in app: JSON payload: 
+ * Debugger PIN: 217-853-934
+[2023-06-19 04:58:01,514] INFO in app: JSON payload: 
 {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-[2023-06-19 03:50:40,128] INFO in app: Inference payload DataFrame: 
+[2023-06-19 04:58:01,531] INFO in app: Inference payload DataFrame: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-[2023-06-19 03:50:40,140] INFO in app: Scaling Payload: 
+[2023-06-19 04:58:01,541] INFO in app: Scaling Payload: 
    CHAS     RM    TAX  PTRATIO      B  LSTAT
 0     0  6.575  296.0     15.3  396.9   4.98
-[2023-06-19 03:50:40,147] INFO in app: Prediction output: 
+[2023-06-19 04:58:01,544] INFO in app: Prediction output: 
 [20.35373177134412]
-172.17.0.1 - - [19/Jun/2023 03:50:40] "POST /predict HTTP/1.1" 200 -
+172.17.0.1 - - [19/Jun/2023 04:58:01] "POST /predict HTTP/1.1" 200 -
